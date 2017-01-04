@@ -86,13 +86,11 @@ function Application(props) {
 			<Header title={props.title} />
 			<div className="teams">
 
-				{ /* Using Map to loop through our teams JSON.  The below (2) Team name calls are no longer necessary. */ }
-				{ /* <Team name="Alabama" score="0" /> */ }
-				{ /* <Team name="Clemson" score="0" /> */ }
+				{ /* Using Map to loop through our teams JSON. */ }
 
 				{ /* props.teams is an array of team objects */ }
 				{ /* return a component with the current team name and score */ }
-				{ /* () => {} is ES6 way of saying function(something) {} */ }
+				{ /* () => {} is ES6 way of saying function() {} */ }
 
 				{ /* Map has replaced the for loop - index is a counter */ }
 				{props.teams.map((team, index) => {
@@ -105,6 +103,7 @@ function Application(props) {
 }
 
 ReactDOM.render (
+	// title and teams are properties sent to the application component when rendered
 	<Application title="National Championship Scoreboard" teams={teams} />,
 	document.getElementById('container')
 )
